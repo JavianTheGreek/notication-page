@@ -1,0 +1,44 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use '../util/breakpoints' as *;
+@use '../util/fontSize' as *;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1280px;
+    width: 450px;
+    margin: 50px auto;
+    padding: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--Very-light-grayish-blue);
+    position: relative;
+    
+    @include mq(768px) {
+        padding: 0;
+        width: 650px;
+    }
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.attribution {
+    position:absolute;
+    bottom: -40px;
+    left: 5%;
+
+    @include mq(768px) {
+        left: 15%;
+    }
+
+    a {
+        color: hsl(228, 45%, 44%);
+      }
+}

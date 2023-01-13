@@ -1,0 +1,156 @@
+@use '../util/breakpoints' as *;
+@use '../util/fontSize' as *;
+
+.card {
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+    // box-shadow: 4px 4px 16px #e1e1e1;
+    padding: 1.25rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+
+            @include mq(768px){
+                font-size: 1.65rem;
+            }
+
+            span {
+                color: var(--White );
+                font-size: 1rem;
+                background-color: var(--Blue);
+                padding: .25rem .6rem;
+                border-radius: 9px;
+                margin-left: 5px;
+            }
+        }
+
+        button {
+            color: var(--Grayish-blue);
+            font-size: .95rem;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            
+            @include mq(768px){
+                font-size: 1.1rem;
+            }
+
+            &:hover {
+                color: var(--Blue);
+            }
+
+            &:active {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__body {
+        
+        
+        &-container {
+            margin-top: 1rem;
+
+            .notification__card, .notification__content, .notification__content-box, .box-fluid {
+                display: flex;
+            }
+
+            .notification__card {
+                align-items: center;
+                padding: 1rem;
+
+                img {
+                    width: 40px;
+                    margin-right: .85rem;
+                }
+                
+
+                .notification__content {
+                    flex-direction: column;
+    
+    
+                    &-box {
+                        align-items: center;
+
+                        h3 {
+                            font-weight: 700;
+                            font-size: 1rem;
+                            margin-right: 5px;
+
+
+                            @include mq(768px){
+                                font-size: .85rem;
+                            }
+                        }
+
+                        p {
+                            color: var(--Grayish-blue);
+                            font-size: 75rem;
+                            margin-right: 5px;
+
+                            @include mq(768px){
+                                font-size: .85rem;
+                            }
+
+                            
+                        }
+                        span {
+                            font-weight: 700;
+                            color: var(--Dark-grayish-blue);
+                        }
+
+                        
+    
+                    }
+
+                    p{
+                        color: var(--Grayish-blue);
+                        font-size: .95rem;
+
+                        @include mq(768px){
+                            font-size: .95rem;
+                        }
+                    }
+
+                    .box-fluid {
+                        align-items: center;
+
+                        .club {
+                            color: var(--Blue);
+                        }
+                    }
+                }
+            }
+        }
+
+        .pop-up {
+            background-color: var(--Light-grayish-blue-1);    
+            border-radius: 10px;
+        }
+
+        .read {
+            display: block;
+            background-color: red;
+            border-radius: 100%;
+            width: 1px;
+            padding: .2rem;
+        }
+    }
+
+
+
+
+
+
+   
+}

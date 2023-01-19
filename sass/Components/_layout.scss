@@ -4,8 +4,8 @@
 .card {
     background-color: var(--White);
     border-radius: 10px;
-    box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
-    // box-shadow: 4px 4px 16px #e1e1e1;
+    // box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+    box-shadow: 0.25rem 0.25rem 1rem rgb(240, 237, 237);
     padding: 1.25rem;
 
     &__header {
@@ -57,36 +57,44 @@
 
     &__body {
         
-        
         &-container {
+            align-items: center;
             margin-top: 1rem;
 
-            .notification__card, .notification__content, .notification__content-box, .box-fluid {
+            .notification__card, .notification__content, .notification__content-container {
                 display: flex;
+            }
+            .notification__content-container {
+                align-items: center;
             }
 
             .notification__card {
+                padding: .65rem;
                 align-items: center;
-                padding: 1rem;
 
                 img {
-                    width: 40px;
-                    margin-right: .85rem;
+                    width: 2.5rem;
+                    margin-right: .50rem;
                 }
                 
 
                 .notification__content {
                     flex-direction: column;
-    
-    
-                    &-box {
-                        align-items: center;
 
                         h3 {
+                            color: var(--Very-dark-blue);
                             font-weight: 700;
-                            font-size: 1rem;
+                            font-size: .85rem;
                             margin-right: 5px;
+                            flex: 1;
 
+                            a {
+                                color: inherit;
+                            }
+
+                            .active_link:hover {
+                                color: var(--Blue);
+                            }
 
                             @include mq(768px){
                                 font-size: .85rem;
@@ -95,32 +103,23 @@
 
                         p {
                             color: var(--Grayish-blue);
-                            font-size: 75rem;
+                            font-size: .85rem;
                             margin-right: 5px;
-
-                            @include mq(768px){
-                                font-size: .85rem;
-                            }
 
                             
                         }
                         span {
                             font-weight: 700;
                             color: var(--Dark-grayish-blue);
+
+                            a {
+                                color: inherit;
+                            }
+
+                            .active_link:hover {
+                                color: var(--Blue);
+                            }
                         }
-
-                        
-    
-                    }
-
-                    p{
-                        color: var(--Grayish-blue);
-                        font-size: .95rem;
-
-                        @include mq(768px){
-                            font-size: .95rem;
-                        }
-                    }
 
                     .box-fluid {
                         align-items: center;
@@ -129,28 +128,65 @@
                             color: var(--Blue);
                         }
                     }
+
+                    .dates span{
+                        color: var(--Grayish-blue);
+                        font-size: .85rem;
+            
+                        @include mq(768px){
+                            font-size: .95rem;
+                        }
+                    }
+
+                    
+                }
+
+                #chess-img {
+                    margin-left: auto;
+
+                    img:hover {
+                        border: 1px solid var(var(--Dark-grayish-blue));
+                        border-radius: 7px;
+                    }
+                }
+                
+            }
+            .message {
+                color: var(--Dark-grayish-blue);
+                font-size: .95rem;
+                line-height: 1.3;
+                border: 1px solid var(--Light-grayish-blue-2);
+                border-radius: 8px;
+                padding: 1rem;
+                margin: auto 0;
+                margin-left:3.5rem;
+
+                &:hover {
+                    background-color: var(--Light-grayish-blue-2);
+                    cursor: pointer;
+                }
+
+                @include mq(768px){
+                    margin-left:4rem;
                 }
             }
+            
         }
-
         .pop-up {
-            background-color: var(--Light-grayish-blue-1);    
+            background-color: var(--Light-grayish-blue-2);    
             border-radius: 10px;
         }
 
-        .read {
-            display: block;
+        .read{
+            display: inline-flex;
+            align-items: center;
             background-color: red;
             border-radius: 100%;
-            width: 1px;
-            padding: .2rem;
+            padding: .19rem;
+            margin-left: .5rem;
         }
     }
 
-
-
-
-
-
-   
+    
 }
+

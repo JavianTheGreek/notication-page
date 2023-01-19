@@ -11,9 +11,9 @@
 
 body {
     max-width: 1280px;
-    width: 450px;
+    width: 500px;
     margin: 50px auto;
-    padding: 1rem;
+    padding: 2rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--Very-light-grayish-blue);
     position: relative;
@@ -21,9 +21,13 @@ body {
     @include mq(768px) {
         padding: 0;
         width: 650px;
+        padding: 0;
     }
 }
 
+a {
+    text-decoration: none;
+}
 
 img {
     max-width: 100%;
